@@ -1,15 +1,10 @@
 import React from "react";
-
-import { Title, Container } from "./styled";
-
-import GlobalStyle from "../../styles/Global_Styles";
+import { Container, Title } from "./syled";
 
 export default function Login() {
      return (
           <Container>
-               <GlobalStyle />
-               {/* <Title isRed={false}>Login</Title> */}
-
+               <Title>Pagina Login</Title>
           </Container>
      );
 }
