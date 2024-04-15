@@ -5,6 +5,6 @@ export default function PrivateRoute({ children }) {
 
   const user = true;
 
-  return user ? children : <Navigate to="/login" />;
-  
+  return user ? children : <Navigate to="/redirect" />;
+
 }
