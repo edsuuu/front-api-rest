@@ -25,58 +25,45 @@ export function AppRoutes() {
                <Route
                     path="/aluno"
                     element={
-                         <PrivateRoute>
-                              <Aluno />
+                         <PrivateRoute isClosed={true}>
+                              {() => <Aluno />}
                          </PrivateRoute>
                     }
                />
                <Route
                     path="/aluno/:id/edit"
                     element={
-                         <PrivateRoute>
-                              <Aluno />
+                         <PrivateRoute isClosed={true}>
+                              {() => <Aluno />}
                          </PrivateRoute>
                     }
                />
                <Route
                     path="/alunos"
                     element={
-                         <PrivateRoute>
-                              <Alunos />
+                         <PrivateRoute isClosed={true}>
+                              {() => <Alunos />}
                          </PrivateRoute>
                     }
                />
                <Route
                     path="/fotos"
                     element={
-                         <PrivateRoute>
-                              <Fotos />
+                         <PrivateRoute isClosed={true}>
+                              {() => <Fotos />}
                          </PrivateRoute>
                     }
                />
                <Route
                     path="/fotos:id"
                     element={
-                         <PrivateRoute>
-                              <Fotos />
+                         <PrivateRoute isClosed={true}>
+                              {() => <Fotos />}
                          </PrivateRoute>
                     }
                />
 
                <Route path="*" element={<Pagina404 />} />
-               {/*
-
-               rota privada
-
-
-               <Route
-                    path="/logado"
-                    element={
-                         <PrivateRoute>
-                              <Logado />
-                         </PrivateRoute>
-                    }
-               /> */}
           </Routes>
      );
 }
