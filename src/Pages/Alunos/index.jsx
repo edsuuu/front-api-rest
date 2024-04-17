@@ -6,26 +6,20 @@ import { FaUserCircle, FaEdit, FaWindowClose } from "react-icons/fa";
 
 import axios from "../../services/axios";
 
+import Loading from "../../Components/Loading";
+
 export default function Alunos() {
-     const addTokenToHeaders = (config) => {
-          const token = localStorage.getItem("authorization");
-
-          if (token) {
-               config.headers.Authorization = `Bearer ${token}`;
-          }
-
-          return config;
-     };
-
-     axios.interceptors.request.use(addTokenToHeaders);
 
      const [alunos, setAlunos] = useState([]);
+     const [isLoading, setIsLoading] = useState(false);
 
      useEffect(() => {
           async function getAlunos() {
                try {
+                    setIsLoading(true);
                     const response = await axios.get("/alunos");
                     setAlunos(response.data);
+                    setIsLoading(false);
                } catch (e) {
                     console.log(e);
                }
@@ -36,6 +30,8 @@ export default function Alunos() {
 
      return (
           <Container>
+               <Loading isLoading={isLoading}/>
+
                <Title>Alunos</Title>
                <AlunoContainer>
                     {alunos.map((aluno) => (

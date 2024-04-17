@@ -1,6 +1,6 @@
-import styled, {createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 // import * as colors from '../config/colors';
 
@@ -12,7 +12,18 @@ export default createGlobalStyle`
      }
 
      body {
-          background-color: gray;
+          background-color: #1a1a1a;
+
+          .Toastify {
+               font-family: 'Roboto', sans-serif;
+               div {
+               }
+               .toast-container {
+                    width: auto;
+                    margin-top: 4%;
+
+               }
+          }
      }
      nav {
           background-color: white;
@@ -28,5 +39,4 @@ export default createGlobalStyle`
 
 export const Container = styled.div`
      background-color: white;
-
-`
+`;

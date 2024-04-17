@@ -6,6 +6,7 @@ export const Title = styled.h1`
 `;
 
 export const Container = styled.div`
+     color: white;
      margin-top: 50px;
      border: 1px solid #ccc;
 `;
