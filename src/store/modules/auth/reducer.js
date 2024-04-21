@@ -34,7 +34,6 @@ export default function authReducer(state = initialState, action) {
                const newState = { ...initialState };
                newState.isLoading = true;
                return newState;
-
           }
 
           default: {

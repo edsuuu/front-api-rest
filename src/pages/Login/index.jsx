@@ -54,7 +54,7 @@ export default function Login() {
 
      return (
           <Container>
-               <Loading isLoading={isLoading}/>
+               <Loading isLoading={isLoading} />
                <Form onSubmit={handleSubmit}>
                     <Title>Pagina Login</Title>
                     <label name="email">

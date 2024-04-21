@@ -5,9 +5,7 @@ import { toast } from 'react-toastify';
 import * as actions from './actions';
 import * as types from '../types';
 import axios from '../../../services/axios';
-import {get} from 'lodash';
-
-
+import { get } from 'lodash';
 
 function* loginRequest({ payload }) {
 

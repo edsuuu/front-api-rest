@@ -18,6 +18,3 @@ export function loginFailure(payload) {
           payload,
      }
 }
-
-
-
