@@ -18,16 +18,10 @@ export default function authReducer(state = initialState, action) {
                return newState;
           }
           case types.LOGIN_REQUEST_FAILURE: {
+               
                const newState = { ...initialState };
                newState.isLoading = false;
-
                return newState;
-               // return {
-               //      ...state,
-               //      isLoggedIn: false,
-               //      token: null,
-               //      user: {},
-               // };
           }
 
           case types.LOGIN_REQUEST_REQUEST: {
