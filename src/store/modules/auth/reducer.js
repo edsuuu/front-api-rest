@@ -18,7 +18,6 @@ export default function authReducer(state = initialState, action) {
                return newState;
           }
           case types.LOGIN_REQUEST_FAILURE: {
-               
                const newState = { ...initialState };
                newState.isLoading = false;
                return newState;
@@ -29,6 +28,27 @@ export default function authReducer(state = initialState, action) {
                newState.isLoading = true;
                return newState;
           }
+
+          case types.PROFILE_UPDATE_SUCCESS: {
+               const newState = { ...state };
+               newState.isLoading = false;
+               return newState;
+
+          }
+          case types.PROFILE_UPDATE_REQUEST: {
+               const newState = { ...state };
+               newState.isLoading = true;
+               newState.user = action.payload;
+               return newState;
+
+          }
+          case types.PROFILE_UPDATE_FAILURE: {
+               const newState = { ...state };
+               newState.isLoading = false;
+               return newState;
+
+          }
+
 
           default: {
                return state;

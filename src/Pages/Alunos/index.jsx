@@ -96,7 +96,7 @@ export default function Alunos() {
 
                <Link to={`/aluno`}>Criar novo aluno</Link>
                <AlunoContainer>
-                    {alunos.map((aluno) => (
+                    {alunos.map((aluno, index) => (
                          <Profile key={String(aluno.id)}>
                               {get(aluno, "Fotos[0].url", false) ? (
                                    <img
@@ -122,7 +122,7 @@ export default function Alunos() {
                               </Link>
 
                               <FaExclamation
-                                   onClick={(e) => handleDelete(e, aluno.id)}
+                                   onClick={(e) => handleDelete(e, aluno.id, index)}
                                    size={30}
                                    display="none"
                                    cursor="pointer"

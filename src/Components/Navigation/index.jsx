@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 
 const Navigation = () => {
      const { user, isLoggedIn } = useSelector((state) => state.auth);
+
      const navigate = useNavigate();
      const dispatch = useDispatch();
 
@@ -30,6 +31,7 @@ const Navigation = () => {
           { name: "Registre-se", to: "/register", hidden: isLoggedIn },
           { name: "Aluno", to: "/aluno", hidden: !isLoggedIn },
           { name: "Alunos", to: "/alunos", hidden: !isLoggedIn },
+          { name: "Perfil", to: "/perfil", hidden: !isLoggedIn },
 
      ];
 

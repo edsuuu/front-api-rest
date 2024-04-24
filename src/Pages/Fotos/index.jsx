@@ -16,7 +16,7 @@ export default function Fotos() {
      const [isLoading, setIsLoading] = useState(false);
      const [foto, setFoto] = useState("");
      const dispatch = useDispatch();
-     
+
      useEffect(() => {
           const getData = async () => {
                try {
@@ -55,6 +55,7 @@ export default function Fotos() {
                });
 
                toast.success("Foto enviada com sucesso");
+               navigate(`/alunos/`);
                setIsLoading(false);
           } catch (err) {
                const { status } = get(err, "response", {});
@@ -68,7 +69,7 @@ export default function Fotos() {
           <Container>
                <Loading isLoading={isLoading} />
 
-               <Title>Pagina Fotos</Title>
+               <Title>Atualizar Foto do aluno</Title>
 
                <Form>
                     <label htmlFor="foto">

@@ -18,3 +18,21 @@ export function loginFailure(payload) {
           payload,
      }
 }
+export function updateRequest(payload) {
+     return {
+          type: types.PROFILE_UPDATE_REQUEST,
+          payload,
+     }
+}
+export function updateSuccess(payload) {
+     return {
+          type: types.PROFILE_UPDATE_SUCCESS,
+          payload,
+     }
+}
+export function updateFailure(payload) {
+     return {
+          type: types.PROFILE_UPDATE_FAILURE,
+          payload,
+     }
+}

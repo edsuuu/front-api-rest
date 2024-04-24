@@ -6,6 +6,7 @@ import Alunos from "../Pages/Alunos";
 import Fotos from "../Pages/Fotos";
 import HomePage from "../Pages/HomePage";
 import Login from "../Pages/Login";
+import Perfil from "../Pages/Profile";
 import Register from "../Pages/Register";
 import { Redirect } from "../Pages/Redirect";
 
@@ -46,7 +47,15 @@ export function AppRoutes() {
                          </PrivateRoute>
                     }
                />
-               
+               <Route
+                    path="/perfil"
+                    element={
+                         <PrivateRoute isClosed={true}>
+                              {() => <Perfil />}
+                         </PrivateRoute>
+                    }
+               />
+
                <Route
                     path="/fotos/:id"
                     element={
