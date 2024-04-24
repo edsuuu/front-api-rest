@@ -62,11 +62,10 @@ export default function Alunos() {
                novosAlunos.splice(index, 1);
                setAlunos(novosAlunos);
 
-               window.location.reload();
-
+               toast.success("Aluno(a) deletado(a) com sucesso");
 
                setIsLoading(false);
-               toast.success("Aluno(a) deletado(a) com sucesso");
+
           } catch (err) {
                setIsLoading(false);
                const status = get(err, "response.status", 0);

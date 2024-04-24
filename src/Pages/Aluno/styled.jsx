@@ -15,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-     background-color: #9ec2ff;
+     background-color: #afafaf;
      width: 600px;
      height: auto;
      display: flex;
@@ -70,12 +70,14 @@ export const Button = styled.button`
 export const ProfilePicture = styled.div`
      display: flex;
      flex-direction: column;
+     justify-content: center;
+     align-items: center;
      text-align: center;
      padding: 10px;
 
      img {
-          width: 200px;
-          height: 200px;
+          width: 150px;
+          height: 150px;
           border-radius: 50%;
      }
      a {
@@ -86,7 +88,6 @@ export const ProfilePicture = styled.div`
           justify-content: center;
           align-items: center;
           gap: 5px;
-          font-weight:bold;
+          font-weight: bold;
      }
-
 `;

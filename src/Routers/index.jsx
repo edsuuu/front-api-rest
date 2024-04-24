@@ -55,7 +55,7 @@ export function AppRoutes() {
                     }
                />
                <Route
-                    path="/fotos:id"
+                    path="/fotos/:id"
                     element={
                          <PrivateRoute isClosed={true}>
                               {() => <Fotos />}

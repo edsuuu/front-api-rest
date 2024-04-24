@@ -5,6 +5,7 @@ import { Nav, Lista, Icon } from "./styled";
 import { Link } from "react-router-dom";
 import * as actions from "../../store/modules/auth/actions";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Navigation = () => {
      const { user, isLoggedIn } = useSelector((state) => state.auth);
@@ -15,7 +16,7 @@ const Navigation = () => {
           e.preventDefault();
           dispatch(actions.loginFailure());
           navigate("/");
-          window.location.reload();
+          toast.success("Logout efetuado com sucesso!");
      };
 
      const rotas = [
