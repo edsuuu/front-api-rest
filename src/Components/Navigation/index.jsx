@@ -30,7 +30,7 @@ const Navigation = () => {
           { name: "Registre-se", to: "/register", hidden: isLoggedIn },
           { name: "Aluno", to: "/aluno", hidden: !isLoggedIn },
           { name: "Alunos", to: "/alunos", hidden: !isLoggedIn },
-          { name: "Fotos", to: "/fotos", hidden: !isLoggedIn },
+
      ];
 
      return (

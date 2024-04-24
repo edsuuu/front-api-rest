@@ -46,14 +46,7 @@ export function AppRoutes() {
                          </PrivateRoute>
                     }
                />
-               <Route
-                    path="/fotos"
-                    element={
-                         <PrivateRoute isClosed={true}>
-                              {() => <Fotos />}
-                         </PrivateRoute>
-                    }
-               />
+               
                <Route
                     path="/fotos/:id"
                     element={
