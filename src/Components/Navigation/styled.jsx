@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+     /* position: fixed;
+     width: 100%; */
      padding: 10px;
      display: flex;
      flex-direction: row;

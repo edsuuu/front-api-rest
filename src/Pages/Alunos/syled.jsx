@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
      background-color: #afafaf;
@@ -41,3 +42,7 @@ export const Profile = styled.div`
           border-radius: 50%;
      }
      `;
+
+export const NovoAluno = styled(Link)`
+     background-color: #00b4d8;
+`;

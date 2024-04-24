@@ -21,7 +21,7 @@ export function AppRoutes() {
                <Route path="/login" element={<Login />} />
                <Route path="/register" element={<Register />} />
                <Route path="/redirect" element={<Redirect />} />
-               
+
                <Route
                     path="/aluno"
                     element={
