@@ -8,7 +8,7 @@ import HomePage from "../Pages/HomePage";
 import Login from "../Pages/Login";
 import Perfil from "../Pages/Profile";
 import Register from "../Pages/Register";
-import { Redirect } from "../Pages/Redirect";
+import Redirect from "../Pages/Redirect";
 
 import Pagina404 from "../Pages/NotFoundPage";
 

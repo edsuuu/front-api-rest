@@ -1,18 +1,24 @@
-// import { useNavigate } from "react-router-dom";
-import React from "react";
 
-import { toast } from "react-toastify";
-import { Container } from "./styled";
+import React from "react";
+import EscolaImagem from "./img/escola.webp";
+import { Container, Imagem, Titulo   } from "./styled";
 
 export default function Home() {
-     // const navigate = useNavigate();
 
-     const notify = () => toast.success("Wow so easy !");
 
      return (
           <Container>
-               <h1>Sistema da Escola </h1>
-               <button onClick={notify}>Notify !</button>
+
+               <Titulo>
+                    <h1>Bem-vindo(a) <br/>Em Nosso Sistema escolar</h1>
+
+                    <p>Explore nosso painel de gestão, onde você pode acompanhar o progresso dos alunos, gerenciar informações acadêmicas e promover uma experiência educacional envolvente e eficaz.</p>
+
+               </Titulo>
+
+               <Imagem>
+                    <img src={EscolaImagem} alt="" />
+               </Imagem>
           </Container>
      );
 }

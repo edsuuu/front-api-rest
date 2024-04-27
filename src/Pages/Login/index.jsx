@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Container, Form, Title, Button } from "./syled";
+import { Container, Form, Title, Button, Foto, Conteudo } from "./styled";
 import { isEmail } from "validator";
 import { toast } from "react-toastify";
 import { get } from "lodash";
-
+import LoginImagem from "./img/login.webp";
 import Loading from "../../Components/Loading";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -55,28 +55,33 @@ export default function Login() {
      return (
           <Container>
                <Loading isLoading={isLoading} />
-               <Form onSubmit={handleSubmit}>
-                    <Title>Pagina Login</Title>
-                    <label name="email">
-                         Digite seu E-mail
-                         <input
-                              type="text"
-                              value={email}
-                              onChange={(e) => setEmail(e.target.value)}
-                              placeholder="Digite seu Email"
-                         />
-                    </label>
-                    <label name="password">
-                         Digite a sua Senha
-                         <input
-                              type="password"
-                              value={password}
-                              onChange={(e) => setPassword(e.target.value)}
-                              placeholder="Digite a sua Senha"
-                         />
-                    </label>
-                    <Button type="submit">Entrar</Button>
-               </Form>
+               <Conteudo>
+                    <Foto>
+                         <Title>Pagina Login</Title>
+                         <img src={LoginImagem} alt="" />
+                    </Foto>
+                    <Form onSubmit={handleSubmit}>
+                         <label name="email">
+                              Digite seu E-mail
+                              <input
+                                   type="text"
+                                   value={email}
+                                   onChange={(e) => setEmail(e.target.value)}
+                                   placeholder="Digite seu Email"
+                              />
+                         </label>
+                         <label name="password">
+                              Digite a sua Senha
+                              <input
+                                   type="password"
+                                   value={password}
+                                   onChange={(e) => setPassword(e.target.value)}
+                                   placeholder="Digite a sua Senha"
+                              />
+                         </label>
+                         <Button type="submit">Entrar</Button>
+                    </Form>
+               </Conteudo>
           </Container>
      );
 }

@@ -1,7 +1,5 @@
-//   http://192.168.0.84:3001/
-
 import axios from 'axios';
 
 export default axios.create({
-     baseURL: 'http://localhost:3001',
+     baseURL: 'https://api-study.ddns.net',
 })

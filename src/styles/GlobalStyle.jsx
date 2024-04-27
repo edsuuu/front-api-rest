@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,7 +12,7 @@ export default createGlobalStyle`
      }
 
      body {
-          background-color: #1a1a1a;
+          background-color: #cccccc;
 
           .Toastify {
                font-family: 'Roboto', sans-serif;
@@ -25,18 +25,6 @@ export default createGlobalStyle`
                }
           }
      }
-     nav {
-          background-color: white;
-          & ul {
-               display: flex;
-               justify-content: center;
-               gap: 30px;
-               padding: 20px;
-               list-style: none;
-          }
-     }
+
 `;
 
-export const Container = styled.div`
-     background-color: white;
-`;

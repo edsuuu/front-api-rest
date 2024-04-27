@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Container, Form, Title, Button } from "./syled";
+import { Container, Form, Title, Button } from "./styled";
 import { isEmail } from "validator";
 import { toast } from "react-toastify";
 import axios from "../../services/axios";

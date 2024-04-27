@@ -10,6 +10,7 @@ export const Container = styled.div`
      align-items: center;
      margin: 10px auto 10px auto;
      border-radius: 10px;
+
      `;
 export const Title = styled.h1`
      margin-top: 20px;

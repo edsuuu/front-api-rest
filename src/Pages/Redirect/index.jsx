@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Title } from "./syled";
+import { Container, Title } from "./styled";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import { useEffect } from "react";
-
-export const Redirect = () => {
-     const [time, setTime] = useState(2);
+import ErrorImagem from "./img/error.webp";
+export default function Redirect() {
+     const [time, setTime] = useState(3);
      const timeOut = useRef(0);
 
      const navigate = useNavigate();
@@ -29,7 +29,12 @@ export const Redirect = () => {
 
      return (
           <Container>
-               <Title>Você não está logado ! Será redirecionado em: {time}</Title>
+               <div>
+                    <img src={ErrorImagem} alt="" />
+               </div>
+               <Title>
+                    Você não está logado ! <br/> Será redirecionado em: {time}
+               </Title>
           </Container>
      );
-};
+}
