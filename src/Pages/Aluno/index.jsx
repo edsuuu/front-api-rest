@@ -153,7 +153,7 @@ export default function Aluno() {
                               {foto ? (
                                    <img src={foto} alt={nome} crossOrigin="anonymous"/>
                               ) : (
-                                   <FaUserCircle size={70} />
+                                   <FaUserCircle size={150} />
                               )}
                               <Link to={`/fotos/${id}`}>
                                   Trocar foto <FaEdit size={24}/>

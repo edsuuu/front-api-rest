@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-     text-decoration: underline;
+     margin-top: 50px;
 `;
 
 export const Container = styled.div`
@@ -16,6 +16,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
+
      label {
           border-radius: 50%;
           width: 180px;

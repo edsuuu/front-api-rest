@@ -63,7 +63,7 @@ export const Title = styled.div`
      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
      display: block;
-     h2 {
-          font-size: 1.2rem;
+     h1 {
+          width: 300px;
      }
 `;

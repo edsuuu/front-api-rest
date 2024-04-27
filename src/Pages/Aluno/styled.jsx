@@ -92,4 +92,7 @@ export const ProfilePicture = styled.div`
           gap: 5px;
           font-weight: bold;
      }
+     a:hover {
+          text-decoration: underline;
+     }
 `;

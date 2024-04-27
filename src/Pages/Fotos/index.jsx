@@ -8,8 +8,6 @@ import { get} from "lodash";
 import { useDispatch } from "react-redux";
 import * as actions from "../../store/modules/auth/actions";
 
-
-
 export default function Fotos() {
      const { id } = useParams();
      const navigate = useNavigate();

@@ -9,7 +9,7 @@ import Login from "../Pages/Login";
 import Perfil from "../Pages/Profile";
 import Register from "../Pages/Register";
 import Redirect from "../Pages/Redirect";
-
+import AlunoProfile from "../Pages/AlunoProfile";
 import Pagina404 from "../Pages/NotFoundPage";
 
 // import Logado from "../Pages/Logado";
@@ -44,6 +44,14 @@ export function AppRoutes() {
                     element={
                          <PrivateRoute isClosed={true}>
                               {() => <Alunos />}
+                         </PrivateRoute>
+                    }
+               />
+               <Route
+                    path="/alunos/:id"
+                    element={
+                         <PrivateRoute isClosed={true}>
+                              {() => <AlunoProfile />}
                          </PrivateRoute>
                     }
                />

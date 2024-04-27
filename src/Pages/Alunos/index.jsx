@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 import React, { useEffect, useState } from "react";
-import { AlunoContainer, Container, Profile, Title } from "./syled";
+import { AlunoContainer, Botoes, Container, Profile, Title } from "./syled";
 import { Link } from "react-router-dom";
 import { get } from "lodash";
 import {
@@ -65,7 +65,6 @@ export default function Alunos() {
                toast.success("Aluno(a) deletado(a) com sucesso");
 
                setIsLoading(false);
-
           } catch (err) {
                setIsLoading(false);
                const status = get(err, "response.status", 0);
@@ -94,14 +93,14 @@ export default function Alunos() {
                <Loading isLoading={isLoading} />
                <Title>
                     <h1>Alunos</h1>
-                    <Link to={`/aluno`}>Criar novo aluno</Link>
+                    <Link to={`/aluno`}>
+                         <FaEdit /> Criar novo aluno
+                    </Link>
                </Title>
-
 
                <AlunoContainer>
                     {alunos.map((aluno, index) => (
-                         <Profile key={String(aluno.id)}>
-                              
+                         <Profile id={aluno.id} key={String(aluno.id)}>
                               {get(aluno, "Fotos[0].url", false) ? (
                                    <img
                                         src={aluno.Fotos[0].url}
@@ -109,28 +108,50 @@ export default function Alunos() {
                                         crossOrigin="anonymous"
                                    />
                               ) : (
-                                   <FaUserCircle size={50} />
+                                   <FaUserCircle size={50} cursor="normal" />
                               )}
-                              <span>{aluno.nome}</span>
-                              <span>{aluno.email}</span>
+                              <div>
+                                   <h4>Nome:</h4>
+                                   <span>{aluno.nome}</span>
+                              </div>
 
                               <div>
-                                   <Link to={`/aluno/${aluno.id}/edit`}>
-                                        <FaEdit size={30} />
+                                   <h4>E-mail: </h4>
+                                   <span>{aluno.email}</span>
+                              </div>
+
+                              <Botoes>
+                                   <Link
+                                        className="perfil"
+                                        to={`/alunos/${aluno.id}`}
+                                   >
+                                        Perfil
                                    </Link>
                                    <Link
+                                        className="editar"
+                                        to={`/aluno/${aluno.id}/edit`}
+                                   >
+                                        <FaEdit size={30} />
+                                   </Link>
+
+                                   <Link
+                                        className="deletar"
                                         onClick={handleDeleteAsk}
                                         to={`/aluno/${aluno.id}/delete`}
                                    >
                                         <FaWindowClose size={30} />
                                    </Link>
+
                                    <FaExclamation
-                                        onClick={(e) => handleDelete(e, aluno.id, index)}
+                                        onClick={(e) =>
+                                             handleDelete(e, aluno.id, index)
+                                        }
                                         size={30}
                                         display="none"
                                         cursor="pointer"
+                                        className="deletarWarn"
                                    />
-                              </div>
+                              </Botoes>
                          </Profile>
                     ))}
                </AlunoContainer>
