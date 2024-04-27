@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+     margin-top: 120px;
      background-color: #ccc;
      display: flex;
      flex-direction: column;
@@ -26,6 +27,7 @@ export const Button = styled.button`
 
 export const Form = styled.form`
      background-color: #afafaf;
+     border: 0.1px solid #00000029;
      width: 600px;
      height: auto;
      display: flex;
@@ -34,6 +36,11 @@ export const Form = styled.form`
      border-radius: 10px;
      gap: 15px;
      padding: 20px;
+     box-shadow: 4px 7px 15px #000000ac;
+     small {
+          text-align: center;
+          font-size: 0.9rem;
+     }
      label {
           margin-top: 10px;
           padding: 5px;

@@ -1,27 +1,27 @@
 import styled from "styled-components";
 
 export const Title = styled.div`
-     width: 600px;
-     height: 300px;
-     align-self: start;
-     margin-top: 15%;
-     background-color: gray;
-     padding: 20px;
-     border-radius: 10px;
      text-align: center;
-     box-shadow: 4px 7px 15px #000000ac;
-
      & h1 {
-          font-size: 3.5rem;
+          font-size: 3rem;
           padding: 0.3%;
+          margin-bottom: 20px;
      }
-     & p {
-          font-size: 1.17rem;
-          justify-content: center;
-          text-align: justify;
-          margin-top: 10px;
-          padding: 6% 3.3%;
+     img {
+          width: 400px;
+          height: 400px;
      }
+`;
+
+export const Conteudo = styled.div`
+     border-radius: 15px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     background-color: #8080804b;
+     box-shadow: 4px 7px 15px #000000ac;
+     padding: 40px 0px 50px 50px;
+     gap: 50px;
 `;
 
 export const Container = styled.div`
@@ -53,16 +53,14 @@ export const Button = styled.button`
 `;
 
 export const Form = styled.form`
-     background-color: gray;
-     width: 600px;
+margin-top: 40px;
+     width: 500px;
      height: auto;
      display: flex;
      flex-direction: column;
      align-items: center;
      border-radius: 10px;
-     gap: 40px;
-     padding: 40px 20px;
-     box-shadow: 4px 7px 15px #000000ac;
+     gap: 20px;
 
      label {
           margin-top: 10px;

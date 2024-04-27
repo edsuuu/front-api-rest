@@ -16,8 +16,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
      text-align: center;
      padding: 20px;
-     text-transform: uppercase;
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: 3rem;
 `;
 
 export const Foto = styled.div`
@@ -85,7 +84,7 @@ export const Conteudo = styled.div`
      display: flex;
      flex-wrap: wrap;
      flex-direction: row;
-     background-color: gray;
+     background-color: #8080804b;
      box-shadow: 4px 7px 15px #000000ac;
      padding: 40px 0px 50px 50px;
      gap: 50px;

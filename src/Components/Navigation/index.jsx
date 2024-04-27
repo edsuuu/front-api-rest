@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import * as actions from "../../store/modules/auth/actions";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { PiStudentBold } from "react-icons/pi";
+import { IoNewspaper } from "react-icons/io5";
+// import { PiStudentBold } from "react-icons/pi";
 
 const Navigation = () => {
      const { user, isLoggedIn } = useSelector((state) => state.auth);
@@ -29,8 +30,8 @@ const Navigation = () => {
                icon: <FaUserAlt />,
                hidden: isLoggedIn,
           },
-          { name: "Registre-se", to: "/register", hidden: isLoggedIn },
-          { name: "Aluno", to: "/aluno", icon: <PiStudentBold size={20}/>, hidden: !isLoggedIn },
+          { name: "Registre-se", to: "/register",icon: <IoNewspaper  size={18}/>, hidden: isLoggedIn },
+          // { name: "Aluno", to: "/aluno", icon: <PiStudentBold size={20}/>, hidden: !isLoggedIn },
           { name: "Alunos", to: "/alunos", icon: <FaUsers size={20}/>, hidden: !isLoggedIn },
           { name: "Perfil", to: "/perfil", icon: <FaUser size={16}/>, hidden: !isLoggedIn },
      ];
@@ -40,7 +41,7 @@ const Navigation = () => {
                <Title>
                     {isLoggedIn && (
                          <h1>
-                              Olá ! {user.nome}
+                              Bem vindo! {user.nome}
                          </h1>
                     )}
                </Title>

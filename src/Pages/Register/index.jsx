@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Container, Form, Title, Button } from "./styled";
+import { Container, Form, Title, Button, Conteudo } from "./styled";
 import { isEmail } from "validator";
 import { toast } from "react-toastify";
 import axios from "../../services/axios";
 import { get } from "lodash";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../Components/Loading";
-
+import RegisterImage from "./img/register.webp";
 
 export default function Register() {
      const [isLoading, setIsLoading] = useState(false);
@@ -57,49 +57,43 @@ export default function Register() {
 
      return (
           <Container>
-               <Loading isLoading={isLoading}/>
-               <Title>
-                    <h1>Registre-se</h1>
-                    <p>
-                         Lorem ipsum dolor sit amet consectetur, adipisicing
-                         elit. Ut laudantium architecto veniam autem quas
-                         quisquam quis quo. Quisquam exercitationem amet alias?
-                         Ipsam aliquam facere odio consequatur obcaecati fuga
-                         harum. Aut.
-                    </p>
-               </Title>
-
-               <Form onSubmit={handleSubmit}>
-                    <label name="nome">
-                         Digite seu Nome {}
-                         <input
-                              type="text"
-                              value={nome}
-                              onChange={(e) => setNome(e.target.value)}
-                              placeholder="Digite seu Nome"
-                         />
-                    </label>
-                    <label name="email">
-                         Digite seu E-mail
-                         <input
-                              type="text"
-                              value={email}
-                              onChange={(e) => setEmail(e.target.value)}
-                              placeholder="Digite seu Email"
-                         />
-                    </label>
-                    <label name="password">
-                         Digite sua Senha
-                         <input
-                              type="password"
-                              value={password}
-                              onChange={(e) => setPassword(e.target.value)}
-                              placeholder="Digite sua Senha"
-                         />
-                    </label>
-
-                    <Button type="submit">Criar minha conta</Button>
-               </Form>
+               <Loading isLoading={isLoading} />
+               <Conteudo>
+                    <Title>
+                         <h1>Crie a sua conta</h1>
+                         <img src={RegisterImage} alt="" />
+                    </Title>
+                    <Form onSubmit={handleSubmit}>
+                         <label name="nome">
+                              Digite seu Nome {}
+                              <input
+                                   type="text"
+                                   value={nome}
+                                   onChange={(e) => setNome(e.target.value)}
+                                   placeholder="Digite seu Nome"
+                              />
+                         </label>
+                         <label name="email">
+                              Digite seu E-mail
+                              <input
+                                   type="text"
+                                   value={email}
+                                   onChange={(e) => setEmail(e.target.value)}
+                                   placeholder="Digite seu Email"
+                              />
+                         </label>
+                         <label name="password">
+                              Digite sua Senha
+                              <input
+                                   type="password"
+                                   value={password}
+                                   onChange={(e) => setPassword(e.target.value)}
+                                   placeholder="Digite sua Senha"
+                              />
+                         </label>
+                         <Button type="submit">Criar minha conta</Button>
+                    </Form>
+               </Conteudo>
           </Container>
      );
 }

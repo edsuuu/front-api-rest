@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-     text-decoration: underline;
-     margin-bottom: 20px;
+     margin-bottom: 5px;
 `;
 
 export const Container = styled.div`
+     margin-top: 100px;
      display: flex;
      justify-content: center;
      flex-direction: column;
@@ -24,11 +24,13 @@ export const Form = styled.form`
      border-radius: 10px;
      gap: 15px;
      padding: 20px;
+     box-shadow: 4px 7px 13px #000000ac;
+
      label {
           margin-top: 10px;
           padding: 5px;
           color: #000000;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-family: "Roboto", sans-serif;
           font-weight: bold;
           display: flex;
@@ -40,9 +42,9 @@ export const Form = styled.form`
           }
      }
      input {
-          padding: 10px 15px;
+          padding: 8px 15px;
           border-radius: 15px;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           border: 0.5px solid #000000bd;
           &:focus {
                border: 1px solid #00ffb3;

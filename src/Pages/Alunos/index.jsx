@@ -92,12 +92,16 @@ export default function Alunos() {
      return (
           <Container>
                <Loading isLoading={isLoading} />
-               <Title>Alunos</Title>
+               <Title>
+                    <h1>Alunos</h1>
+                    <Link to={`/aluno`}>Criar novo aluno</Link>
+               </Title>
 
-               <Link to={`/aluno`}>Criar novo aluno</Link>
+
                <AlunoContainer>
                     {alunos.map((aluno, index) => (
                          <Profile key={String(aluno.id)}>
+                              
                               {get(aluno, "Fotos[0].url", false) ? (
                                    <img
                                         src={aluno.Fotos[0].url}
@@ -110,23 +114,23 @@ export default function Alunos() {
                               <span>{aluno.nome}</span>
                               <span>{aluno.email}</span>
 
-                              <Link to={`/aluno/${aluno.id}/edit`}>
-                                   <FaEdit size={30} />
-                              </Link>
-
-                              <Link
-                                   onClick={handleDeleteAsk}
-                                   to={`/aluno/${aluno.id}/delete`}
-                              >
-                                   <FaWindowClose size={30} />
-                              </Link>
-
-                              <FaExclamation
-                                   onClick={(e) => handleDelete(e, aluno.id, index)}
-                                   size={30}
-                                   display="none"
-                                   cursor="pointer"
-                              />
+                              <div>
+                                   <Link to={`/aluno/${aluno.id}/edit`}>
+                                        <FaEdit size={30} />
+                                   </Link>
+                                   <Link
+                                        onClick={handleDeleteAsk}
+                                        to={`/aluno/${aluno.id}/delete`}
+                                   >
+                                        <FaWindowClose size={30} />
+                                   </Link>
+                                   <FaExclamation
+                                        onClick={(e) => handleDelete(e, aluno.id, index)}
+                                        size={30}
+                                        display="none"
+                                        cursor="pointer"
+                                   />
+                              </div>
                          </Profile>
                     ))}
                </AlunoContainer>
