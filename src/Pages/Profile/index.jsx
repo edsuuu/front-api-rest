@@ -11,6 +11,7 @@ import axios from "../../services/axios";
 
 export default function Perfil() {
      const user = useSelector((state) => state.auth.token);
+     
      const id = useSelector((state) => state.auth.user.id);
      const nomeStorage = useSelector((state) => state.auth.user.nome);
      const emailStorage = useSelector((state) => state.auth.user.email);
@@ -38,6 +39,7 @@ export default function Perfil() {
 
      function handleSubmit(e) {
           e.preventDefault();
+
 
           let formErrors = false;
 
@@ -80,6 +82,8 @@ export default function Perfil() {
                };
 
                await axios.delete(`/users`, config);
+
+
 
                dispatch(actions.loginFailure());
 

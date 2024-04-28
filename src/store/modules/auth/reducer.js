@@ -17,6 +17,7 @@ export default function authReducer(state = initialState, action) {
                newState.isLoading = false;
                return newState;
           }
+
           case types.LOGIN_REQUEST_FAILURE: {
                const newState = { ...initialState };
                newState.isLoading = false;
