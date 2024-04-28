@@ -1,6 +1,8 @@
 # React.js Front para API_ESCOLA
 
-## <a href="https://front-escola.ddns.net/" target="_blank">Deploy</a>
+## <a href="https://front-escola.ddns.net/" target="_blank">Deploy do Front </a>
+## <a href="https://api-study.ddns.net/" target="_blank">Deploy da API</a>
+## <a href="https://github.com/edsuuu/api_escola" target="_blank">Repositorio da API</a>
 
 <img src="public/image.png" width="100%" height="auto"/>
 
@@ -8,9 +10,18 @@
 
 Front Para consumo da api_escola,
 
-Tecnologias
+# Tecnologias usadas
 
-React, Redux, Styled Components, axios...
+- Axios
+- Lodash
+- React-icons
+- React-redux
+- React-router-dom 6
+- React-toastify
+- Redux
+- Redux-saga
+- Styled-components
+- Validator
 
 ### Clonar o repositório
 
@@ -29,6 +40,3 @@ cd front-escola
 ```bash
 npm install && npm start
 ```
-
-
-
